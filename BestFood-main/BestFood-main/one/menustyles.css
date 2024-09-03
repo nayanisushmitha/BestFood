@@ -1,0 +1,134 @@
+
+#mainMenu {
+    text-align: center;
+    word-break: break-word;
+}
+
+#mainMenu .floatingToolbox {
+    z-index: 10000 !important;
+}
+
+#mainMenu .overlay ul {
+    height: auto;
+}
+
+#menuButtonWrap {
+    text-align: center;
+    position: fixed;
+    width: 20%;
+    left: 40%;
+    z-index: 100;
+    padding: 0;
+}
+
+.menuButton {
+    font-size: 32px;
+    color: black;
+    border: 1px;
+}
+
+#trigger-overlay {
+    position: relative;
+    margin-top: 50px;
+    
+}
+
+#close-menu {
+    font-size: 30px;
+    background: transparent;
+    cursor: pointer;
+    color: black;
+    transition: 0.5s;
+}
+
+#close-menu:hover {
+    opacity: 0.5
+}
+
+#menuOverlaySection {
+    display: table;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgb(129,55,114), rgba(129,55,114,0.2));
+    z-index: 10;
+}
+
+.overlay-contentpush,
+.overlay-contentpush.close {
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: visibility 0s 0.5s;
+    transition: visibility 0s 0.5s;
+    -webkit-transition: opacity 0.8s ease-in;
+    -moz-transition: opacity 0.8s ease-in;
+    -o-transition: opacity 0.8s ease-in;
+    opacity: 0;
+}
+
+.overlay-contentpush.open {
+    visibility: visible;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transition: opacity 0.8s ease-in;
+    -moz-transition: opacity 0.8s ease-in;
+    -o-transition: opacity 0.8s ease-in;
+    opacity: 1;
+}
+
+#menuBorder {
+    background-color: white;
+    border-radius: 10px;
+}
+
+#menuTitle {
+    font-size: 40px;
+    margin-top: 50px;
+    color: black;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: normal;
+}
+
+#menuIcons {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#menuIcons .menuItemA {
+    color: black;
+    font-size: 30px;
+    display: inline;
+    padding: 0 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#menuIcons .menuItemA:hover {
+    opacity: 0.5;
+    background: transparent;
+}
+
+#menuItems {
+    width: 100%;
+    padding: 10px 0 30px;
+}
+
+#menuItems .menuItemLi {
+    width: 100%;
+    text-align: center;
+}
+
+#menuItems .menuItemLi a {
+    color: black;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+#menuItems .menuItemLi a:hover {
+    opacity: 0.5;
+    background-color: white;
+}
+

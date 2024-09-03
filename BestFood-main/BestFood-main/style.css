@@ -1,0 +1,1835 @@
+
+#mainMenu {
+    text-align: center;
+    word-break: break-word;
+}
+
+#mainMenu .floatingToolbox {
+    z-index: 10000 !important;
+}
+
+#mainMenu .overlay ul {
+    height: auto;
+}
+
+#menuButtonWrap {
+    text-align: center;
+    position: fixed;
+    width: 20%;
+    left: 40%;
+    z-index: 100;
+    padding: 0;
+}
+
+.menuButton {
+    font-size: 32px;
+    color: black;
+    border: 1px;
+}
+
+#trigger-overlay {
+    position: relative;
+    margin-top: 50px;
+    
+}
+
+#close-menu {
+    font-size: 30px;
+    background: transparent;
+    cursor: pointer;
+    color: black;
+    transition: 0.5s;
+}
+
+#close-menu:hover {
+    opacity: 0.5
+}
+
+#menuOverlaySection {
+    display: table;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgb(129,55,114), rgba(129,55,114,0.2));
+    z-index: 10;
+}
+
+.overlay-contentpush,
+.overlay-contentpush.close {
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: visibility 0s 0.5s;
+    transition: visibility 0s 0.5s;
+    -webkit-transition: opacity 0.8s ease-in;
+    -moz-transition: opacity 0.8s ease-in;
+    -o-transition: opacity 0.8s ease-in;
+    opacity: 0;
+}
+
+.overlay-contentpush.open {
+    visibility: visible;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transition: opacity 0.8s ease-in;
+    -moz-transition: opacity 0.8s ease-in;
+    -o-transition: opacity 0.8s ease-in;
+    opacity: 1;
+}
+
+#menuBorder {
+    background-color: white;
+    border-radius: 10px;
+}
+
+#menuTitle {
+    font-size: 40px;
+    margin-top: 50px;
+    color: black;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: normal;
+}
+
+#menuIcons {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#menuIcons .menuItemA {
+    color: black;
+    font-size: 30px;
+    display: inline;
+    padding: 0 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#menuIcons .menuItemA:hover {
+    opacity: 0.5;
+    background: transparent;
+}
+
+#menuItems {
+    width: 100%;
+    padding: 10px 0 30px;
+}
+
+#menuItems .menuItemLi {
+    width: 100%;
+    text-align: center;
+}
+
+#menuItems .menuItemLi a {
+    color: black;
+    font-size: 24px;
+    transition: 0.5s;
+}
+
+#menuItems .menuItemLi a:hover {
+    opacity: 0.5;
+    background-color: white;
+}
+
+@media only screen and (max-width : 767px) {
+
+    #menuIcons .menuItemA {
+        padding: 0 18px;
+    }
+
+    #menuTitle {
+        margin-top: 0;
+    }
+}
+
+
+#headerContent {
+    color: white;
+    overflow: hidden;
+    word-break: break-word;
+    padding-bottom: 200px;
+}
+
+#headerTitle {
+    font-size: 90px;
+    padding-left: 20px; 
+    letter-spacing: .04em;
+    border-left: 6px solid rgb(129,55,114);
+}
+
+#headerSubtitle {
+    font-size: 28px;
+    font-style: italic;
+}
+
+header .customTitle {
+    font-size: 28px;
+    display: block;
+}
+
+header .customParagraph {
+    font-size: 20px;
+    display: block;
+}
+
+header .customLink,
+header .customLink a {
+    color: white;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+}
+
+header .customLink:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+header .customIcon {
+    font-size: 36px;
+}
+
+header .customTitle,
+header .customParagraph,
+header .customLink,
+header .customIcon,
+header .customButton,
+header .customImage,
+header .customEmbed {
+    margin: 15px 0 10px;
+}
+
+@media only screen and (max-width : 800px) {
+
+    #headerTitle {
+        font-size: 56px;
+        padding-left: 10px; 
+        letter-spacing: 0em;
+    }
+
+    #headerSubtitle {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    header .customParagraph,
+    header .customLink {
+        font-size: 16px;
+    }
+}
+header {
+    background: url('https://bestfoodbasedonuserreviews.site.live/img/8yfmN-g2go3-a21fs-iwqZR-j0OnE.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+#headerLogoImage {
+    position: fixed;
+    left: 3%;
+    bottom: 10px;
+    width: 200px;
+    max-width: 30%;
+    z-index: 100;
+}
+
+#about {
+    color: black;
+}
+
+#about .aboutImageBg {
+    color: white;
+}
+
+#aboutContent {
+    text-align: center;
+    overflow: hidden;
+}
+
+#aboutBox {
+    padding: 36px 54px 54px;
+    background-color: white;
+}
+
+#about .aboutImageBg #aboutBox {
+    background: rgba(255,255,255,0.2);
+}
+
+#aboutTitle {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+#aboutHr {
+    border: 2px solid rgb(129,55,114);
+    width: 33px;
+    margin: 22px auto;
+}
+
+#about .aboutImageBg #aboutHr {
+    border-color: white;
+}
+
+.aboutParagraph {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+#aboutParagraph1Wrap {
+    margin-bottom: 20px;
+}
+
+#about .customTitle {
+    font-size: 36px;
+    display: block;
+}
+
+#about .customParagraph {
+    line-height: 1.6;
+    font-size: 15px;
+    display: block;
+}
+
+#about .customLink {
+    color: black;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+}
+
+#about .aboutImageBg .customLink {
+    color: white;
+}
+
+#about .customLink:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+#about .customIcon {
+    font-size: 36px;
+}
+
+#about .customTitle,
+#about .customParagraph,
+#about .customLink,
+#about .customIcon,
+#about .customButton,
+#about .customImage,
+#about .customEmbed {
+    margin: 10px 0;
+}
+
+@media only screen and (max-width : 800px) {
+
+    #aboutTitle {
+        font-size: 30px;
+    }
+
+    #aboutBox {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+
+    #about .customTitle {
+        font-size: 30px;
+    }
+
+    #about #aboutHrWrap .customTitle,
+    #about #aboutHrWrap .customParagraph,
+    #about #aboutHrWrap .customLink,
+    #about #aboutHrWrap .customIcon,
+    #about #aboutHrWrap .customButton,
+    #about #aboutHrWrap .customImage,
+    #about #aboutHrWrap .customEmbed {
+        margin-bottom: 20px;
+    }
+}
+#aboutContainer {
+    background: rgb(255,255,255);
+}
+
+#features {
+    color: black;
+}
+
+#features .featuresImageBg {
+    color: white;
+}
+
+#featuresContent {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#featuresTitle {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin: 10px 0 20px;
+}
+
+#featuresSubtitle {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.featuresItemWrap {
+    margin-top: 40px;
+}
+
+.features2 {
+    display: flex;
+}
+
+.featuresIcon {
+    font-size: 55px;
+}
+
+.featuresHr {
+    border: 1px solid black;
+    width: 50%;
+    margin: 12px auto;
+}
+
+#features .featuresImageBg .featuresHr {
+    border-color: white;
+}
+
+.featuresHeader {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.featuresParagraph {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: .06em;
+    margin-bottom: 30px;
+}
+
+#features .customTitle {
+    font-size: 40px;
+    letter-spacing: .08em;
+    display: block;
+}
+
+#features #featuresRowContainer .customTitle {
+    font-size: 16px;
+    letter-spacing: normal;
+}
+
+#features .customParagraph {
+    line-height: 1.5;
+    letter-spacing: .06em;
+    font-size: 14px;
+    display: block;
+}
+
+#features #featuresRowContainer .customParagraph {
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+#features .customLink {
+    color: black;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+
+#features .featuresImageBg .customLink {
+    color: white;
+}
+
+#features .customLink:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+#features .customIcon {
+    font-size: 30px;
+}
+
+#features .customTitle,
+#features .customParagraph,
+#features .customLink,
+#features .customIcon, 
+#features .customButton,
+#features .customImage,
+#features .customEmbed {
+    margin: 10px 0;
+}
+
+#features #featuresSubtitleWrap .customTitle {
+    letter-spacing: normal;
+}
+
+@media only screen and (max-width : 767px) {
+
+    #featuresInfoRow {
+        display: initial;
+    }
+
+    #featuresTitleWrap {
+        margin-bottom: 30px;
+    }
+
+    #featuresTitle {
+        font-size: 30px;
+    }
+
+    .features2 {
+        display: initial;
+        margin: 0;
+    }
+
+    #features .customTitle {
+        font-size: 30px;
+    }
+}
+#featuresContainer {
+    background: url('https://bestfoodbasedonuserreviews.site.live/img/food-tr8i4-JYGl4-y3EeJ-0BNFl-11fHE.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#gallery {
+    color: black;
+}
+
+#gallery .galleryImageBg {
+    color: white;
+}
+
+#galleryContent {
+    word-wrap: break-word;
+    text-align: center;
+}
+
+#galleryTop {
+    background-color: rgb(129,55,114);
+    color: white;
+    border-radius: 10px;
+}
+
+#galleryTitle {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.categoryButtonContainer {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.categoryButton {
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 32px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.categoryButton:hover,
+.categoryButton:focus {
+    color: rgb(129,55,114);
+    background-color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.categoryButtonSelected {
+    color: rgb(129,55,114);
+    background-color: white;
+    text-decoration: none;
+}
+
+.categoryFilter {
+    margin-top: 40px;
+}
+
+.galleryImages {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#gallery .galleryImageBg .galleryImages {
+    border: 1px solid white;
+}
+
+#fancybox-content {
+    background: white;
+}
+
+#fancybox-title-over {
+    font-size: 20px;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+#fancybox-title {
+    margin-left: 0 !important;
+    padding: 0 !important;
+}
+
+.zoom {
+    transition: .5s;
+}
+
+.transition {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05); 
+}
+
+#fancybox-close {
+    right: -35px;
+}
+
+#fancybox-right {
+    right: -20px;
+}
+
+#fancybox-bg-nw,
+#fancybox-bg-ne,
+#fancybox-bg-sw,
+#fancybox-bg-se {
+    display: none;
+}
+
+/* * * * * * * * * */
+
+#gallery .customTitle {
+    font-size: 40px;
+    display: block;
+}
+
+#gallery .customParagraph {
+    font-size: 18px;
+    display: block;
+}
+
+#gallery .customLink {
+    color: white;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+}
+
+#gallery .customLink:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+#gallery .customIcon {
+    font-size: 32px;
+}
+
+#gallery .customTitle,
+#gallery .customParagraph,
+#gallery .customLink,
+#gallery .customIcon, 
+#gallery .customButton,
+#gallery .customImage,
+#gallery .customEmbed {
+    margin: 10px 0;
+}
+
+@media only screen and (max-width : 800px) {
+
+    #galleryTop {
+        border-radius: 0;
+    }
+}
+                    
+@media only screen and (max-width : 767px) {
+
+    #galleryTitle {
+        font-size: 40px;
+    }
+
+    .categoryButton {
+        margin-top: 10px;
+    }
+}
+#galleryContainer {
+    background: rgb(255,255,255);
+}
+#testimonial {
+    color: black;
+}
+
+#testimonial .testimonialImageBg {
+    color: white;
+}
+
+#testimonialContent {
+    word-wrap: break-word;
+    padding-bottom: 100px;
+}
+
+#testimonialTitleWrap {
+    margin-bottom: 15px;
+}
+
+#testimonialTitle {
+    font-size: 45px;
+    letter-spacing: .075em;
+    margin: 0;
+}
+
+#testimonialTitleHr {
+    border: 2px solid black;
+    width: 30%;
+    margin: 10px auto;
+}
+
+#testimonial .testimonialImageBg #testimonialTitleHr {
+    border-color: white;
+}
+
+#testimonialSubtitleWrap {
+    margin-bottom: 20px;
+}
+
+#testimonialSubtitle {
+    font-size: 25px;
+    letter-spacing: .075em;
+    font-style: italic;
+    margin: 0;
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+}
+
+#quote-carousel .carousel-control {
+    background: none;
+    color: rgb(129,55,114);
+    font-size: 35px;
+    text-shadow: none;
+    margin-top: 30px;
+}
+
+#testimonial .testimonialImageBg #quote-carousel .carousel-control {
+    color: white;
+}
+
+#quote-carousel .carousel-control.left {
+    left: -12px;
+    top: 60px;
+}
+
+#quote-carousel .carousel-control.right {
+    right: -12px;
+    top: 60px;
+}
+
+#quote-carousel .carousel-indicators {
+    bottom: -60px;
+}
+
+#quote-carousel .carousel-indicators li {
+    background: rgba(129,55,114,0.3);
+    height: 14px;
+    width: 60px;
+    margin: 6px 6px 0;
+}
+
+#quote-carousel .carousel-indicators .active {
+    background: rgb(129,55,114);
+}
+
+#testimonial .testimonialImageBg #quote-carousel .carousel-indicators .active {
+    background: white;
+}
+
+.testimonialCarouselIcons {
+    cursor: pointer;
+}
+
+#quote-carousel img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid white;
+    object-fit: cover;
+}
+
+.item blockquote {
+    border-left: none; 
+    margin: 0;
+}
+
+.testimonialCard {
+    background-color: rgba(129,55,114,0.6);
+    border-radius: 20px;
+    color: white;
+}
+
+#testimonial .testimonialImageBg .testimonialCard {
+    background-color: rgb(129,55,114);
+    border: 2px solid white;
+}
+
+.testimonialCardBottom {
+    display: flex;
+    margin: 8px 0;
+}
+
+.item blockquote img {
+    margin-bottom: 10px;
+}
+
+blockquote p:before {
+    display: none;
+}
+
+.testimonialParagraph {
+    font-size: 17px;
+    letter-spacing: .02em;
+}
+
+.blockquoteSource {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 0;
+    display: block;
+}
+
+#testimonial .testimonialImageBg .blockquoteSource {
+    color: white;
+}
+
+/* * * * * * * * */
+
+#testimonial .customTitle {
+    font-size: 40px;
+    letter-spacing: .075em;
+    display: block;
+}
+
+#testimonial .testimonialCard .customTitle {
+    font-size: 24px;
+    letter-spacing: normal;
+}
+
+#testimonial .customParagraph {
+    font-size: 19px;
+    letter-spacing: .02em;
+    display: block;
+}
+
+#testimonial .testimonialCard .customParagraph {
+    font-size: 17px;
+}
+
+#testimonial .customLink {
+    color: black;
+    font-size: 19px;
+    display: block;
+    width: 100%;
+}
+
+#testimonial .testimonialCard .customLink {
+    font-size: 17px;
+}
+
+#testimonial .testimonialImageBg .customLink, 
+#testimonial .testimonialCard .customLink {
+    color: white;
+}
+
+#testimonial .customLink:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+#testimonial .customIcon {
+    font-size: 32px;
+}
+
+#testimonial .customTitle,
+#testimonial .customParagraph,
+#testimonial .customLink,
+#testimonial .customIcon,
+#testimonial .customButton,
+#testimonial .customImage,
+#testimonial .customEmbed {
+    margin: 10px 0;
+}
+
+#testimonial #testimonialTitleWrap .customIcon,
+#testimonial #testimonialTitleWrap .customButton,
+#testimonial #testimonialTitleWrap .customImage {
+    margin: 10px 0 0;
+}
+
+#testimonial #testimonialTitleHrWrap .customIcon,
+#testimonial #testimonialTitleHrWrap .customButton,
+#testimonial #testimonialTitleHrWrap .customImage,
+#testimonial .testimonialImage .customTitle,
+#testimonial .testimonialImage .customParagraph,
+#testimonial .testimonialImage .customLink,
+#testimonial .testimonialImage .customIcon,
+#testimonial .testimonialImage .customButton,
+#testimonial .testimonialImage .customImage,
+#testimonial .testimonialImage .customEmbed {
+    margin: 5px 0 5px;
+}
+
+#testimonial .blockquoteSourceWrap .customTitle,
+#testimonial .blockquoteSourceWrap .customParagraph,
+#testimonial .blockquoteSourceWrap .customLink,
+#testimonial .blockquoteSourceWrap .customIcon,
+#testimonial .blockquoteSourceWrap .customButton,
+#testimonial .blockquoteSourceWrap .customImage,
+#testimonial .blockquoteSourceWrap .customEmbed {
+    margin: 5px 0 0;
+}
+
+#testimonial .testimonialParagraphWrap .customTitle,
+#testimonial .testimonialParagraphWrap .customParagraph,
+#testimonial .testimonialParagraphWrap .customLink,
+#testimonial .testimonialParagraphWrap .customIcon,
+#testimonial .testimonialParagraphWrap .customButton,
+#testimonial .testimonialParagraphWrap .customImage,
+#testimonial .testimonialParagraphWrap .customEmbed {
+    margin: 0;
+}
+
+@media (max-width: 1050px) {
+
+    #quote-carousel .carousel-control.left {
+        top: 40px;
+    }
+
+    #quote-carousel .carousel-control.right {
+        top: 40px;
+    }
+
+}
+
+@media (max-width: 767px) { 
+
+    #testimonialTitle {
+        font-size: 30px;
+    }
+    
+    #testimonialSubtitle {
+        font-size: 20px;
+    }
+    
+    .testimonialCardBottom {
+        display: initial;
+    }
+
+    #quote-carousel .carousel-indicators {
+        bottom: -70px;
+    }
+
+    #quote-carousel .carousel-indicators li {
+        margin: 6px 4px 0;
+    }
+
+    #quote-carousel .carousel-control.left {
+        top: 100px;
+    }
+
+    #quote-carousel .carousel-control.right {
+        top: 100px;
+    }
+}
+#testimonialContainer {
+    background: url('https://static.toiimg.com/photo/95529564.cms');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#team {
+    color: black;
+}
+
+#team .teamImageBg {
+    color: white;
+}
+
+#teamContent {
+    word-wrap: break-word;
+    text-align: center;
+}
+
+#teamTop {
+    display: flex;
+    margin-left: 10px;
+}
+
+#teamTitleOuter {
+    text-align: left;
+}
+
+#teamParaWrap {
+    text-align: right;
+}
+
+#teamTitle {
+    font-size: 48px;
+    letter-spacing: .035em;
+    margin: 0;
+}
+
+#teamParagraph {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.team3 {
+    /* display: flex; */
+    margin: 0;
+}
+
+.teamTemplate {
+    margin-top: 60px;
+}
+
+.teamMemberRow {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.teamMemberImages {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#team .teamImageBg .teamMemberImages {
+    border: 1px solid white;
+}
+
+.teamMemberInfoOuter {
+    padding: 0 5px;
+}
+
+.teamMemberName {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.teamMemberHr {
+    border: 1px solid rgb(129,55,114);
+    margin: 10px 0;
+}
+
+#team .teamImageBg .teamMemberHr {
+    border-color: white;
+}
+
+.teamIconRow {
+    margin: 20px 0 0;
+}
+
+.teamIcon {
+    display: inline;
+    margin-left: 10%;
+    margin-right: 10%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.teamIcon:hover {
+    opacity: 0.5;
+}
+
+/* * * * * * * * */
+
+#team .customTitle {
+    font-size: 40px;
+    letter-spacing: .035em;
+    display: block;
+}
+
+#team #teamRowContainer .customTitle {
+    font-size: 24px;
+    letter-spacing: normal;
+    font-weight: bold;
+}
+
+#team .customParagraph {
+    font-size: 14px;
+    line-height: 1.5;
+    display: block;
+}
+
+#team #teamRowContainer .customLink,
+#team #teamRowContainer .customParagraph {
+    font-size: 14px;
+    line-height: normal;
+}
+
+#team .customLink {
+    color: black;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+#team .teamImageBg .customLink {
+    color: white;
+}
+
+#team .customLink:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+#team .customIcon {
+    font-size: 30px;
+}
+
+#team #teamRowContainer .customIcon {
+    font-size: 26px;
+}
+
+#team .customTitle,
+#team .customParagraph,
+#team .customLink,
+#team .customIcon,
+#team .customButton,
+#team .customImage,
+#team .customEmbed {
+    margin: 10px 0;
+}
+
+#team #teamTitleWrap .customTitle,
+#team #teamTitleWrap .customParagraph,
+#team #teamTitleWrap .customLink,
+#team #teamTitleWrap .customEmbed,
+#team .teamMemberImage .customTitle,
+#team .teamMemberImage .customParagraph,
+#team .teamMemberImage .customLink,
+#team .teamMemberImage .customIcon,
+#team .teamMemberImage .customButton,
+#team .teamMemberImage .customImage,
+#team .teamMemberImage .customEmbed,
+#team .teamMemberHrWrap .customTitle,
+#team .teamMemberHrWrap .customParagraph,
+#team .teamMemberHrWrap .customLink,
+#team .teamMemberHrWrap .customIcon,
+#team .teamMemberHrWrap .customButton,
+#team .teamMemberHrWrap .customImage,
+#team .teamMemberHrWrap .customEmbed,
+#team .teamIconRow .customTitle,
+#team .teamIconRow .customParagraph,
+#team .teamIconRow .customLink,
+#team .teamIconRow .customIcon,
+#team .teamIconRow .customButton,
+#team .teamIconRow .customImage,
+#team .teamIconRow .customEmbed {
+    margin: 10px 0 0;
+}
+
+#team #teamTitleWrap .customIcon,
+#team #teamTitleWrap .customButton,
+#team #teamTitleWrap .customImage,
+#team #teamParagraphWrap .customTitle,
+#team #teamParagraphWrap .customParagraph,
+#team #teamParagraphWrap .customLink,
+#team #teamParagraphWrap .customIcon,
+#team #teamParagraphWrap .customButton,
+#team #teamParagraphWrap .customImage,
+#team #teamParagraphWrap .customEmbed {
+    margin: 0;
+}
+
+#team .teamMemberNameWrap .customTitle,
+#team .teamMemberNameWrap .customParagraph,
+#team .teamMemberNameWrap .customLink,
+#team .teamMemberNameWrap .customIcon,
+#team .teamMemberNameWrap .customButton,
+#team .teamMemberNameWrap .customImage,
+#team .teamMemberNameWrap .customEmbed,
+#team .teamMemberTextWrap .customTitle,
+#team .teamMemberTextWrap .customParagraph,
+#team .teamMemberTextWrap .customLink,
+#team .teamMemberTextWrap .customIcon,
+#team .teamMemberTextWrap .customButton,
+#team .teamMemberTextWrap .customImage,
+#team .teamMemberTextWrap .customEmbed {
+    margin: 0 0 10px;
+}
+
+@media only screen and (max-width : 1050px) {
+
+    .teamMemberRow {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #teamTitle {
+        font-size: 42px;
+    }
+
+    .teamMemberName {
+        font-size: 20px;
+    }
+
+    .teamMemberHr {
+        margin: 10px 0;
+    }
+
+    .teamIconRow {
+        margin-top: 10px;
+    }
+
+    #team #teamRowContainer .customTitle {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width : 991px) {
+
+    .team3 {
+        display: initial;
+    }
+
+    .teamMemberImages {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    #teamTop {
+        display: initial;
+    }
+
+    #teamTitleOuter {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    #teamParaWrap {
+        text-align: center;
+    }
+
+    .teamMemberName {
+        font-size: 16px;
+    }
+
+    #team #teamRowContainer .customTitle {
+        font-size: 16px;
+    }
+
+    #team .teamMemberTextWrap .customLink,
+    #team .teamMemberTextWrap .customIcon,
+    #team .teamMemberTextWrap .customImage {
+        margin-bottom: 0;
+    }
+
+    #team .teamMemberHrWrap .customIcon,
+    #team .teamMemberHrWrap .customButton,
+    #team .teamMemberHrWrap .customImage {
+        margin-top: 0;
+    }
+}
+#blog {
+    color: black;
+    word-break: break-word;
+}
+
+#blog .blogImageBg {
+    color: white;
+}
+
+#blogContent {
+    text-align: center;
+}
+
+#noPostBlogTitle {
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+#blogTitleWrap {
+    margin-bottom: 18px;
+}
+
+#blogTitle {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#blogSubtitleWrap {
+    margin: 10px 0 30px;
+}
+
+#blogSubtitle {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+#blogHrWrap {
+    margin-bottom: 50px;
+}
+
+#blogHr {
+    border: 2px solid rgb(129,55,114);
+    width: 20%;
+}   
+
+#blog .blogImageBg #blogHr {
+    border-color: white;
+}
+
+.posts3 {
+    display: flex;
+    margin-top: 30px;
+}
+
+.postOuter {
+    margin-bottom: 20px;
+}
+
+.blogPostLinkWrap {
+    width: 100%;
+    text-decoration: none !important;
+}
+
+.postInner {
+    position: relative;
+    /* width: 80%; */
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.postInner:hover {
+    box-shadow: 0 0 10px 1px black;
+}
+
+#blog .blogImageBg .postInner:hover {
+    box-shadow: 0 0 10px 1px white;
+}
+
+.blogPostImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#blog .blogImageBg .blogPostImage {
+    border: 1px solid white;
+}
+
+.blogPostOverlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.postTitle {
+    position: inherit;
+    text-shadow: 2px 2px 10px black;
+    color: white;
+    z-index: 2;
+}
+
+.postTitle:hover {
+    color: white;
+}
+
+/* * * * * * * * */
+
+#blog .customTitle {
+    font-size: 45px;
+    display: block;
+}
+
+#blog #noPostBlogTitleWrap .customTitle {
+    font-size: 35px;
+}
+
+#blog .customParagraph {
+    font-size: 18px;
+    display: block;
+}
+
+#blog .customLink {
+    color: black;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+}
+
+#blog .blogImageBg .customLink {
+    color: white;
+}
+
+#blog .customLink:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+#blog .customIcon {
+    font-size: 36px;
+}
+
+#blog .customTitle,
+#blog .customParagraph,
+#blog .customLink,
+#blog .customIcon,
+#blog .customButton,
+#blog .customImage,
+#blog .customEmbed {
+    margin: 10px 0;
+}
+
+#blog #blogTitleWrap .customIcon,
+#blog #blogTitleWrap .customButton,
+#blog #blogTitleWrap .customImage {
+    margin: 0;
+}
+
+#blog #blogSubtitleWrap .customIcon,
+#blog #blogSubtitleWrap .customButton,
+#blog #blogSubtitleWrap .customImage {
+    margin: 10px 0 0;
+}
+
+#blog #blogHrWrap .customIcon,
+#blog #blogHrWrap .customButton,
+#blog #blogHrWrap .customImage {
+    margin: 0 0 10px;
+}
+
+#blog #noPostBlogTitleWrap .customTitle,
+#blog #noPostBlogTitleWrap .customParagraph,
+#blog #noPostBlogTitleWrap .customLink,
+#blog #noPostBlogTitleWrap .customIcon,
+#blog #noPostBlogTitleWrap .customButton,
+#blog #noPostBlogTitleWrap .customImage,
+#blog #noPostBlogTitleWrap .customEmbed {
+    margin: 20px 0 10px;
+}
+
+@media only screen and (max-width : 991px) {
+
+    .posts3 {
+        display: initial;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+
+    #noPostBlogTitle {
+        font-size: 30px;
+    }
+
+    #blogRowContainer:first-child {
+        margin-top: 40px;
+    }
+
+    .postOuter {
+        margin-top: 30px;
+    }
+
+    #blog #noPostBlogTitleWrap .customTitle {
+        font-size: 30px;
+    }
+}
+#blogContainer {
+    background: url('https://bestfoodbasedonuserreviews.site.live/img/food-BYMcc-0AWcs-mQ8lT-gWvFu-AT6KT.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#contact {
+    color: black;
+}
+
+#contact .contactImageBg {
+    color: white;
+}
+
+#contactContent {
+    word-wrap: break-word;
+}
+
+#contactTop {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+#contactTitle {
+    font-size: 48px;
+    margin-top: 0;
+}
+
+#contactTitleHr {
+    border: 2px solid rgb(129,55,114);
+    width: 10%;
+}
+
+#contact .contactImageBg #contactTitleHr {
+    border-color: white;
+}
+
+#contactInfoRow {
+    display: flex;
+}
+
+.contactInfoText {
+    font-size: 16px;
+}
+
+#contactAddress1,
+#contactAddress2,
+#contactEmailInner,
+#contactPhoneInner {
+    margin-bottom: 0;
+}
+
+#contactCityWrap,
+#contactPhoneNumberWrap {
+    margin-bottom: 30px;
+}
+
+.contactInfoTextBlock {
+    display: block;
+}
+
+#contactHoursTitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contactFormInput {
+    border-radius: 3px;
+    border: 2px solid black;
+    padding: 4px;
+}
+
+#contact .contactImageBg .contactFormInput {
+    border-color: white;
+}
+
+.contactFormInput::placeholder {
+    color: black;
+}
+
+#contactMessage {
+    height: 100px;
+    resize: none;
+}
+
+#contactButtons {
+    margin-top: 20px;
+}
+
+.contactButton {
+    color: black;
+    padding: 6px 42px;
+    border: 2px solid rgb(129,55,114);
+    background-color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+.contactButton:focus {
+    color: black;
+}
+
+#contact .contactImageBg .contactButton,
+#contact .contactImageBg .contactButton:focus {
+    color: black;
+    border-color: white;
+}
+
+.contactButton:hover {
+    color: white;
+    background-color: rgb(129,55,114);
+    text-decoration: none;
+}
+
+#contact .contactImageBg .contactButton:hover {
+    color: white;
+    border-color: rgb(129,55,114);
+}
+
+/* * * * * * * * */
+
+#contact .customTitle {
+    font-size: 40px;
+    display: block;
+}
+
+#contact .customParagraph {
+    font-size: 16px;
+    display: block;
+}
+
+#contact .customLink {
+    color: black;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+
+#contact .contactImageBg .customLink  {
+    color: white;
+}
+
+#contact .customLink:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+#contact .customIcon {
+    font-size: 30px;
+}
+
+#contact .customTitle,
+#contact .customParagraph,
+#contact .customLink,
+#contact .customIcon,
+#contact .customButton,
+#contact .customImage,
+#contact .customEmbed {
+    margin: 10px 0;
+}
+
+#contact #contactTitleWrap .customIcon,
+#contact #contactTitleWrap .customButton,
+#contact #contactTitleWrap .customImage {
+    margin: 0;
+}
+
+#contact #contactTitleWrap .customIcon,
+#contact #contactTitleWrap .customButton,
+#contact #contactTitleWrap .customImage,
+#contact #contactHoursWrap .customIcon,
+#contact #contactHoursWrap .customButton,
+#contact #contactHoursWrap .customImage {
+    margin: 0 0 10px;
+}
+
+@media only screen and (max-width : 767px) {
+
+    #contactOuter {
+        padding-bottom: 50px;
+    }
+
+    #contactInfoRow {
+        display: initial;
+    }
+
+    #contactForm {
+        margin-top: 40px;
+    }
+}
+
+#newsLetterOuter {
+    word-break: break-word;
+}
+
+#closeNewsletterButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    font-size: 26px;
+    background: transparent;
+    cursor: pointer;
+    color: rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+#closeNewsletterButton:hover {
+    color: black;
+} 
+
+#newsOverlaySection {
+    display: table;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+#newsletterBorder {
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 0 0 6px white;
+}
+
+.newsletterIcons {
+    font-size: 45px;
+    color: white;
+    background: rgba(0,0,0,0.8);
+    margin-top: 20px;
+    padding: 6px 50px;
+    border-radius: 1px;
+}
+
+#newsletterTitle1 {
+    color: rgba(0,0,0,0.5);
+    font-size: 26px;
+    letter-spacing: .06em;
+    font-weight: normal;
+    margin: 40px 0 0;
+}
+
+#newsletterTitle2 {
+    font-size: 85px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#newsletterSubtitle1 {
+    font-size: 18px;
+    color: rgba(0,0,0,0.5);
+    letter-spacing: .09em;
+    margin-top: 20px;
+}
+
+#newsletterInput {
+    font-size: 12px;
+    width: 50%;
+    height: 45px;
+    margin: 40px auto 10px; 
+    border-color: rgba(0,0,0,0.5);
+    border-radius: 0;
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+#newsletterInput::placeholder {
+    color: rgba(0,0,0,0.5);
+}
+
+#newsletterInput:focus {
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+#newsletterButton {
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    width: 50%;
+    margin: 0;
+    text-decoration: none;
+    background: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+#newsletterButton:focus {
+    color: white;
+}
+
+#newsletterButton:hover {
+    background: rgb(129,55,114);
+}
+
+#newsletterSubtitle2 {
+    color: rgba(0,0,0,0.5);
+    font-size: 10px;
+    width: 75%;
+    margin: 30px auto 20px;
+}
+
+/* * * * * * * * */
+
+#newsletterOuter .customTitle {
+    font-size: 40px;
+    display: block;
+}
+
+#newsletterOuter .customParagraph {
+    font-size: 18px;
+    display: block;
+}
+
+#newsletterOuter .customLink {
+    color: black;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+}
+
+#newsletterOuter .customLink:hover {
+    opacity: 0.6;
+    text-decoration: none;
+}
+
+#newsletterOuter .customIcon {
+    font-size: 28px;
+}
+
+#newsletterOuter .customTitle,
+#newsletterOuter .customParagraph,
+#newsletterOuter .customLink,
+#newsletterOuter .customIcon,
+#newsletterOuter .customButton,
+#newsletterOuter .customImage,
+#newsletterOuter .customEmbed {
+    margin: 10px 0;
+}
+
+@media only screen and (max-width : 500px) {
+
+    #newsletterTitle1 {
+        font-size: 22px;
+    }
+    
+    #newsletterTitle2 {
+        font-size: 52px;
+    }
+
+    #newsletterSubtitle1 {
+        font-size: 16px;
+    }
+
+    #newsletterInput {
+        width: 90%;
+    }
+
+    #newsletterButton {
+        width: 90%;
+    }
+}

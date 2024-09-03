@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboardstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8ff9fb1a07.js" crossorigin="anonymous"></script>
+
+    <style>
+        #dishes-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+            border-radius: 10px;
+            width: 400px;
+            margin: 20px auto;
+            text-align: center;
+            
+        }
+        #order-by-place, #load-more {
+            background: #900C3F; ;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+            
+        }
+        .search-box {
+            display: flex;
+            background-color: none;
+            justify-content: center;
+            padding-left: 40px;
+        }
+
+        .search-input {
+            display: flex;
+            align-items: center;
+            border: 2px solid #900C36;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 5px;
+            
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .search-input input {
+            border: none;
+            background: transparent;
+            padding: 5px;
+            outline: none;
+        }
+
+        .search-icon {
+            color: #900C36;
+        }
+
+        .submit-button {
+            background-color: #900C36;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .submit-button:hover {
+            background-color: #900C36;
+        }
+        #result {
+            margin-top: 40px;
+            margin-left: 50px;
+            margin-right: 80px;
+            border: 1px solid white;
+            border-radius: 4px;
+            
+            text-align: left;
+        }
+
+        .dish-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .dish-image {
+            max-width: 200px;
+            max-height: 200px;
+            margin-right: 40px;
+        }
+
+        .dish-info {
+            flex: 1;
+            font-family: 'Pacifico', ;
+        }
+
+        .dish-name {
+            font-size: 30px;
+            color: #900C36 ;
+            font-family: "Nunito",sans-serif;
+            font-weight: 800;
+            font-weight: bold;
+        }
+
+        .restaurant-taste {
+            font-style: italic;
+        }
+
+        .ratings-reviews {
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Navigation menu -->
+        <div class="menu">
+            <button id="menu-btn">
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+            </button>
+        </div>
+
+        <!-- Overlay div (initially hidden) -->
+        <div class="overlay"></div>
+
+        <!-- Menu content -->
+        <div class="menu-content">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Reach Out</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </div>
+        
+        <!-- Background image with a search box -->
+        <div class="dashboard-background" id="home">
+            <div class="dashboard-content">
+                <h2>Welcome to BitebyVote!</h2>
+                
+            </div>
+            <div class="search-box">
+                <div class="search-input">
+                    <i class="fa-solid fa-utensils fa-lg search-icon"></i>
+                    <input type="text" id="dishName" placeholder="Dish Name">
+                </div>
+                <div class="search-input">
+                    <i class="fa-solid fa-map-marker fa-lg search-icon"></i>
+                    <input type="text" id="placeName" placeholder="Place Name">
+                </div>
+                <div class="search-input">
+                    <i class="fa-solid fa-pepper-hot fa-lg search-icon"></i>
+                    <input type="text" id="taste" placeholder="Taste of Food">
+                </div>
+                <button class="submit-button" onclick="findBestDishes()">Find</button>
+                
+                
+            </div>
+        </div>
+        <div id="result"></div>
+        <div style="display: none;" id="dishesconti">
+            <div class="main-heading">
+                <h1>Search Results </h1>
+            </div>
+            <div id="dishes-container"  ></div>
+            <div id="load-more-container">
+                <button id="load-more">Load More</button>
+            </div>
+        </div>
+
+        <div class="about-us-container" id="aboutus">
+            
+            <div class="about-us-image">
+                <img src="https://media.istockphoto.com/id/120700051/photo/happy-fun-messy-eater.jpg?s=612x612&w=0&k=20&c=fs4TyTJNx73DY3v4YyEcyLtEgbFOORh1TAT4GqERd5o=" alt="">
+            </div>
+            <div class="about-us-text">
+                <div id="aboutTitleWrap"><h2 id="aboutTitle" class="aboutTitles" altonclick="null" althref="null">About Us</h2></div>
+                <div id="aboutHrWrap"><hr id="aboutHr"></div>
+                <p>We are one of the the top Food Based User Reviews solutions in the area. We have been giving high caliber, intensely evaluated Food Based User Reviews solutions to all who come to us for years. In that time, we have found out about client administration and the benefit of realizing our customers needs. We adore driving by ordinary and perceiving how extraordinary we can become together!</p>
+                <br>
+                <p>While other Food Based User Reviews solutions endeavor to be less inclined to service their customers with intimacy and integrity, we specialize in results that are community oriented, affable, and pioneering. We submerge ourselves in your solution to increase profound understanding into your operational and vital potential, working with you to co-make arrangements explicitly for you.</p>
+            </div>
+        </div>
+    </div>
+    <div class="amenities-container" id="amenities">
+        <div class="amenities-background">
+            <!-- Content for Our Amenities -->
+            <div class="amenities-content">
+                <div id="aboutTitleWrap" style="margin-top: 80px;"><h2 id="amenitiesTitle" class="aboutTitles" altonclick="null" althref="null">Our Amenities</h2></div>
+                <div id="aboutHrWrap"><hr id="aboutHr"></div>
+                
+                <div style="margin:0;"><p style="margin: 0;">When suggesting the best food options based on user reviews, consider amenities like ambiance, menu variety, dietary accommodations, outdoor seating, and other user-specific preferences to provide tailored recommendations. Highlighting these amenities can enhance the dining experience for your users.</p></div>
+                <div id="icons">
+                    <div class="icon">
+                        <i class="fas fa-certificate"></i>
+                        <div class="featuresHrWrap"><hr class="featuresHr"></div>
+                        <div class="featuresHeaderWrap"><h5 class="featuresHeader" altonclick="null" althref="null">Quality</h5></div>
+                        <p>We always perform our projects with the utmost quality and integrity.</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-globe"></i>
+                        <div class="featuresHrWrap"><hr class="featuresHr"></div>
+                        <div class="featuresHeaderWrap"><h5 class="featuresHeader" altonclick="null" althref="null">Global</h5></div>
+                        <p>The fact that our work has spread to regions all over the globe is a true indication of our quality.</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-handshake"></i>
+                        
+                        <div class="featuresHrWrap"><hr class="featuresHr"></div>
+                        <div class="featuresHeaderWrap"><h5 class="featuresHeader" altonclick="null" althref="null">Trusted</h5></div>
+                        <p>We are trusted by thousands all around the world to deliver quality work on time.</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-heading">
+        <h1>Sale of the day!!</h1>
+    </div>
+    
+    <div class="main-container">
+        <div class="dish">
+            <img src="https://vismaifood.com/storage/app/uploads/public/105/fc7/89f/thumb__1200_0_0_0_auto.jpg" alt="Chicken Dish">
+            <h3>Chicken spicy curry</h3>
+            <p class="price">$12.99</p>
+            <p class="discount">Save 10%</p>
+        </div>
+        <div class="dish">
+            <img src="https://t3.ftcdn.net/jpg/01/60/53/86/360_F_160538657_aLEWrapDOGdbtuxs2mcCjq2BDvO3sCSJ.jpg" alt="Mutton Dish">
+            <h3>Butterscotch Thickshake</h3>
+            <p class="price">$15.99</p>
+            <p class="discount">Save 15%</p>
+        </div>
+        <div class="dish">
+            <img src="https://vismaifood.com/storage/app/uploads/public/105/fc7/89f/thumb__1200_0_0_0_auto.jpg" alt="Mutton Dish">
+            <h3>Mutton Biryani</h3>
+            <p class="price">$10.99</p>
+            <p class="discount">Save 6%</p>
+        </div>
+        <div class="dish">
+            <img src="https://vismaifood.com/storage/app/uploads/public/105/fc7/89f/thumb__1200_0_0_0_auto.jpg" alt="Mutton Dish">
+            <h3>Mutton Biryani</h3>
+            <p class="price">$10.99</p>
+            <p class="discount">Save 6%</p>
+        </div>
+        <div class="dish">
+            <img src="https://vismaifood.com/storage/app/uploads/public/105/fc7/89f/thumb__1200_0_0_0_auto.jpg" alt="Mutton Dish">
+            <h3>Mutton Biryani</h3>
+            <p class="price">$10.99</p>
+            <p class="discount">Save 6%</p>
+        </div>
+        <div class="dish">
+            <img src="https://vismaifood.com/storage/app/uploads/public/105/fc7/89f/thumb__1200_0_0_0_auto.jpg" alt="Mutton Dish">
+            <h3>Mutton Biryani</h3>
+            <p class="price">$10.99</p>
+            <p class="discount">Save 6%</p>
+        </div>
+<!--         
+        <div class="dish">
+            <img src="https://images.assettype.com/dtnext/import/Articles/2019/Dec/201912080214362435_A-tale-of-biryani-Tracing-the-journey-of-the-muchloved_SECVPF.gif" alt="Mutton Dish">
+            <h3>Mutton Biryani</h3>
+            <p class="price">$10.99</p>
+            <p class="discount">Save 6%</p>
+        </div>
+        <div class="dish">
+            <img src="https://images.assettype.com/dtnext/import/Articles/2019/Dec/201912080214362435_A-tale-of-biryani-Tracing-the-journey-of-the-muchloved_SECVPF.gif" alt="Mutton Dish">
+            <h3>Mutton Biryani</h3>
+            <p class="price">$10.99</p>
+            <p class="discount">Save 6%</p>
+        </div>
+        <div class="dish">
+            <img src="https://images.assettype.com/dtnext/import/Articles/2019/Dec/201912080214362435_A-tale-of-biryani-Tracing-the-journey-of-the-muchloved_SECVPF.gif" alt="Mutton Dish">
+            <h3>Mutton Biryani</h3>
+            <p class="price">$10.99</p>
+            <p class="discount">Save 6%</p>
+        </div> -->
+        
+    </div>
+    <div class="test">
+        <div class="testimonial-container">
+            <div style="margin-top: 300px; color:white;" id="aboutTitleWrap"><h2 style="color: white;" id="amenitiesTitle" class="aboutTitles" altonclick="null" althref="null">Testimonials</h2></div>
+            <div id="aboutHrWrap"><hr id="testiHr"></div>
+            <div class="carousel">
+                <div class="slides">
+                    <div class="slide">
+                        <div class="left-half">
+                            <div class="circular-image">
+                                <img src="https://bestfoodbasedonuserreviews.site.live/img/TbHti-acHom-fsR6Q-AJcrr-9EOdV.png" alt="Customer 1">
+                            </div>
+                            <div class="name_h4"><h4>Ellie</h4></div>
+                        </div>
+                        <div class="right-half">
+                            <p>These guys were great! I absolutely loved every aspect of using their services. Way to go team.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="left-half">
+                            <div class="circular-image">
+                                <img src="https://bestfoodbasedonuserreviews.site.live/img/tiOJX-Dpbit-NLqhh-WhdRX-91UmN.png" alt="Customer 1">
+                            </div>
+                            <div class="name_h4"><h4>Samantha</h4></div>
+                        </div>
+                        <div class="right-half">
+                            <p>I can't think of any better group to recommend here. Absolutely loved what these guys were able to do for me.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="left-half">
+                            <div class="circular-image">
+                                <img src="https://bestfoodbasedonuserreviews.site.live/img/EV9bk-JnPEY-TE9kL-yawuY-z5e3h.png" alt="Customer 1">
+                            </div>
+                            <div class="name_h4"><h4>Brooke</h4></div>
+                        </div>
+                        <div class="right-half">
+                            <p>The experience of working with these guys was fantastic. Couldn't have asked for a smoother transition.</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="navigation">
+                    
+                    <div class="nav-rectangle"></div>
+                    <div class="nav-rectangle"></div>
+                    <div class="nav-rectangle"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="boddy">
+        <div class="main-heading" style="height: 30px;">
+            <h1 style="color: white; margin-top:-6px;">Contact us</h1>
+        </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d244820.18849128907!2d80.644884!3d16.510165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35eff9482d944b%3A0x939b7e84ab4a0265!2sVijayawada%2C%20Andhra%20Pradesh%2C%20India!5e0!3m2!1sen!2sbd!4v1697160873017!5m2!1sen!2sbd" width="600" height="450" style="border:0; display:inline-block; margin:14px; margin-left:90px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container">
+            <p>Have questions or feedback? Contact us using the form below.</p>
+    
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+            
+    </div>
+    </div>
+    <script>
+        // JavaScript code for finding and displaying dishes
+        const dishes = [
+            { name: "Spicy Chicken Curry", place: "Vijayawada", taste: "Spicy", rating: 4.5, reviews: 30 },
+            { name: "Butter Chicken", place: "Vijayawada", taste: "Spicy", rating: 4.0, reviews: 25 },
+            { name: "Chicken Biryani", place: "Hyderabad", taste: "Spicy", rating: 4.7, reviews: 40 },
+            
+        ];
+
+        const imageUrls = [
+                "https://vismaifood.com/storage/app/uploads/public/105/fc7/89f/thumb__1200_0_0_0_auto.jpg",
+                "https://vismaifood.com/storage/app/uploads/public/105/fc7/89f/thumb__1200_0_0_0_auto.jpg",
+                "https://t3.ftcdn.net/jpg/01/60/53/86/360_F_160538657_aLEWrapDOGdbtuxs2mcCjq2BDvO3sCSJ.jpg"
+            ];
+
+        const orderLinks = [
+            "https://example.com/order-dish1",
+            "https://example.com/order-dish2",
+            "https://example.com/order-dish3"
+        ];
+
+        function findBestDishes() {
+            const dishName = document.getElementById("dishName").value.toLowerCase();
+            const placeName = document.getElementById("placeName").value.toLowerCase();
+            const taste = document.getElementById("taste").value.toLowerCase();
+
+            const filteredDishes = dishes.filter(dish => {
+                return dish.name.toLowerCase().includes(dishName) &&
+                       dish.place.toLowerCase() === placeName;
+            });
+
+            const matchingTasteDishes = filteredDishes.filter(dish => dish.taste.toLowerCase() === taste);
+
+            if (matchingTasteDishes.length > 0) {
+                let resultHTML = `Top 3 dishes matching your criteria:<br><br><br><br>`;
+                for (let i = 0; i < Math.min(3, matchingTasteDishes.length); i++) {
+                    const dish = matchingTasteDishes[i];
+                    resultHTML += `<div class="dish-item">
+                                      <img class="dish-image" src="${imageUrls[i]}" alt="${dish.name}">
+                                      <div class="dish-info">
+                                          <div class="dish-name">${dish.name}</div>
+                                          <div>Place: <span class="dish-highlight">${dish.place}</span></div>
+                                          <div class="restaurant-taste">Restaurant: ${dish.place}, Taste: ${dish.taste}</div>
+                                          <div class="ratings-reviews">Rating: ${dish.rating}, Reviews: ${dish.reviews}</div>
+                                      </div>
+                                      <a href="${orderLinks[i]}" target="_blank">Order</a>
+                                   </div>`;
+                }
+
+                document.getElementById("result").innerHTML = resultHTML;
+            } else {
+                document.getElementById("result").innerText = "No matching dishes found.";
+            }
+        }
+    </script>
+
+
+    
+
+
+     <script>
+        const slidesContainer = document.querySelector('.slides');
+        const slides = document.querySelectorAll('.slide');
+        const navigationRectangles = document.querySelectorAll('.nav-rectangle');
+      
+        let currentIndex = 0;
+      
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            if (i === index) {
+              slide.style.display = 'block';
+              slide.style.animation = 'slideInRight 1s forwards';
+            } else {
+              slide.style.display = 'none';
+              slide.style.animation = '';
+            }
+          });
+      
+          
+          navigationRectangles.forEach((rectangle, i) => {
+            rectangle.classList.toggle('active', i === index);
+          });
+        }
+      
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+        }
+      
+        
+        const slideInterval = setInterval(nextSlide, 5000);
+      
+        
+        navigationRectangles.forEach((rectangle, index) => {
+          rectangle.addEventListener('click', () => {
+            currentIndex = index;
+            showSlide(currentIndex);
+            clearInterval(slideInterval); 
+          });
+        });
+      
+        showSlide(currentIndex); 
+      </script>
+      <script>
+        $(document).ready(function () {
+            var testimonials = $('.testimonial');
+            var currentIndex = 0;
+          
+            function showTestimonial(index) {
+              testimonials.removeClass('active');
+              testimonials.eq(index).addClass('active');
+            }
+          
+            function nextTestimonial() {
+              currentIndex = (currentIndex + 1) % testimonials.length;
+              showTestimonial(currentIndex);
+            }
+          
+            function prevTestimonial() {
+              currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+              showTestimonial(currentIndex);
+            }
+          
+            
+            showTestimonial(currentIndex);
+          
+            
+            setInterval(nextTestimonial, 5000);
+          });
+          
+      </script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          var testimonials = $('.testimonial');
+          var currentIndex = 0;
+      
+          function showTestimonial(index) {
+            testimonials.removeClass('active');
+            testimonials.eq(index).addClass('active');
+          }
+      
+          function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+          }
+      
+          function prevTestimonial() {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentIndex);
+          }
+      
+          
+          showTestimonial(currentIndex);
+      
+          
+          setInterval(nextTestimonial, 5000);
+        });
+      </script>
+      
+            
+    <script>
+        const menuButton = document.getElementById('menu-btn');
+        const overlay = document.querySelector('.overlay');
+        const menuContent = document.querySelector('.menu-content');
+
+        menuButton.addEventListener('click', () => {
+            menuContent.classList.toggle('active');
+            overlay.classList.toggle('active'); 
+        });
+    </script>
+</body>
+</html>

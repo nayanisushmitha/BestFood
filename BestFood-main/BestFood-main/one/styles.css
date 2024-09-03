@@ -1,0 +1,66 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://raisingchildren.net.au/__data/assets/image/0027/48735/messy-eaters.jpg'); /* Replace with your actual image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 0px;
+}
+h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
